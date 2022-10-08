@@ -3,9 +3,7 @@ import {Routes,Route,Link} from 'react-router-dom'
 import Home from './components/Home'
 import Designs from './components/Designs'
 import Tutorials from './components/Tutorials'
-import Contact from './components/Contact'
-import Gmail from './components/Gmail'
-import Whatsapp from './components/Whatsapp'
+import About from './components/About'
 import logo from './images/logo.jpg'
 function App() 
 {
@@ -17,9 +15,10 @@ function App()
     <div className='banner'>
 
       {/* NAVBAR */}
-      <nav className="navbar navbar-expand-sm navbar-dark">
-  <div className="container-fluid">
-    <img className=" rounded-circle logoicon" src= {logo} />
+      <nav className="navbar navbar-expand-md navbar-dark">
+  <div className="container">
+    <img className=" navbar-brand rounded-circle logoicon" src= {logo} alt=''/>
+    <h3 className="navbar-brand  mt-1 text-white"> CHERRY EDITING ZONE </h3>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -32,10 +31,10 @@ function App()
           <Link className="nav-link " aria-current="page" to='designs'>Designs</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link " aria-current="page" to='tutorials'>Tutorials</Link>
+          <a className="nav-link " href='https://www.youtube.com/channel/UCItVMd1OI_RPVO0uXsV_qiQ' target='_blank'>Tutorials</a>
         </li>
         <li className="nav-item">
-          <Link className="nav-link " aria-current="page" to='contact'>Contact</Link>
+          <Link className="nav-link " aria-current="page" to='about'>About</Link>
         </li>
       </ul>
     </div>
@@ -50,16 +49,9 @@ function App()
         <Route path="/" element={<Home/>}/>
         <Route path="/designs" element={<Designs/>}/>
         <Route path="/tutorials" element={<Tutorials/>}/>
-        <Route path="/contact" element={<Contact/>}> 
+        <Route path="/about" element={<About/>}/> 
 
-        {/* CHILDREN OF CONTACT ROUTE */}
-        <Route path="gmail" element={<Gmail/>}/>
-        <Route path="whatsapp" element={<Whatsapp/>}/>
-        
-        
-        </Route>
-
-      </Routes>
+        </Routes>
 
     </div>
     

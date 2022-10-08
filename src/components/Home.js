@@ -1,6 +1,9 @@
 import React from 'react'
-import idea from '../images/idea.png'
-import logo from '../images/logo.jpg'
+import c1 from '../images/ci1.jpg'
+import c2 from '../images/ci2.jpg'
+import c3 from '../images/ci3.jpg'
+import c4 from '../images/ci4.jpg'
+
 
 
 
@@ -8,35 +11,37 @@ function Home() {
   return (
 
     
-    <div className='container' >
+    <div className='corousel-css'>
 
-      <div className='text-center  idea'>
-        <img className='w-100'src={idea}/>
+<div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+<div className='welcome-text-bg'>
+      <div className="welcome-text-container">
+          <h3 className='welcome-text'>WELCOME TO MY PAGE</h3>
       </div>
-
-      <div className='  maintext text-center'>
-
-        <h1 className='title w-100'>Welcome to my page!</h1>        
-        <h3 className='subtitle w-100'>professional designs</h3>   
-            
-
-      </div>
-      <div>
-      <div className="card">
-  <img className="card-img-top" src="..." alt="Card image cap"/>
-  <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" className="btn btn-primary">Go somewhere</a>
   </div>
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img src={c1} className="d-block w-100" alt="..."/>
+    </div>
+    <div className="carousel-item">
+      <img src={c3} className="d-block w-100" alt="..."/>
+    </div>
+    <div className="carousel-item">
+      <img src={c4} className="d-block w-100" alt="..."/>
+    </div>
+    <div className="carousel-item">
+      <img src={c2} className="d-block w-100" alt="..."/>
+    </div>
+  </div>
+  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Previous</span>
+  </button>
+  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Next</span>
+  </button>
 </div>
-
-      </div>
-
-
-      
-
-      
     </div>
     
   )
